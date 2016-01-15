@@ -11,9 +11,36 @@
 		8450A0BE1C42EC45003A2DE2 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8450A0BD1C42EC45003A2DE2 /* GameScene.sks */; };
 		8450A0C01C42EC45003A2DE2 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A0BF1C42EC45003A2DE2 /* GameScene.swift */; };
 		8450A0C21C42EC45003A2DE2 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A0C11C42EC45003A2DE2 /* GameViewController.swift */; };
-		8450A0C51C42EC45003A2DE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8450A0C31C42EC45003A2DE2 /* Main.storyboard */; };
 		8450A0C71C42EC45003A2DE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8450A0C61C42EC45003A2DE2 /* Assets.xcassets */; };
 		8450A0CA1C42EC45003A2DE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8450A0C81C42EC45003A2DE2 /* LaunchScreen.storyboard */; };
+		8450A0D51C42ED01003A2DE2 /* Connector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A0D11C42ED01003A2DE2 /* Connector.swift */; };
+		8450A0D61C42ED01003A2DE2 /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A0D21C42ED01003A2DE2 /* LevelViewController.swift */; };
+		8450A0D71C42ED01003A2DE2 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A0D31C42ED01003A2DE2 /* Line.swift */; };
+		8450A0D81C42ED01003A2DE2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A0D41C42ED01003A2DE2 /* MainViewController.swift */; };
+		8450A0DC1C45E091003A2DE2 /* level1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8450A0DB1C45E091003A2DE2 /* level1.txt */; };
+		8450A0E41C46CAA7003A2DE2 /* level2.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8450A0DE1C46CAA7003A2DE2 /* level2.txt */; };
+		8450A0E51C46CAA7003A2DE2 /* level3.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8450A0DF1C46CAA7003A2DE2 /* level3.txt */; };
+		8450A0E61C46CAA7003A2DE2 /* level4.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8450A0E01C46CAA7003A2DE2 /* level4.txt */; };
+		8450A0E71C46CAA7003A2DE2 /* level5.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8450A0E11C46CAA7003A2DE2 /* level5.txt */; };
+		8450A0E81C46CAA7003A2DE2 /* level6.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8450A0E21C46CAA7003A2DE2 /* level6.txt */; };
+		8450A0E91C46CAA7003A2DE2 /* level7.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8450A0E31C46CAA7003A2DE2 /* level7.txt */; };
+		8450A0ED1C46CB90003A2DE2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A0EC1C46CB90003A2DE2 /* User.swift */; };
+		8450A0F01C471E81003A2DE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8450A0EE1C471E81003A2DE2 /* Main.storyboard */; };
+		8450A0F21C471EFE003A2DE2 /* EndGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A0F11C471EFE003A2DE2 /* EndGameViewController.swift */; };
+		8450A0F41C480FB7003A2DE2 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A0F31C480FB7003A2DE2 /* GameOverViewController.swift */; };
+		8450A1021C49656B003A2DE2 /* level8.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8450A0F51C49656B003A2DE2 /* level8.txt */; };
+		8450A1031C49656B003A2DE2 /* level9.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8450A0F61C49656B003A2DE2 /* level9.txt */; };
+		8450A1041C49656B003A2DE2 /* level10.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8450A0F71C49656B003A2DE2 /* level10.txt */; };
+		8450A1051C49656B003A2DE2 /* level11.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8450A0F81C49656B003A2DE2 /* level11.txt */; };
+		8450A1061C49656B003A2DE2 /* level12.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8450A0F91C49656B003A2DE2 /* level12.txt */; };
+		8450A1071C49656B003A2DE2 /* level13.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8450A0FA1C49656B003A2DE2 /* level13.txt */; };
+		8450A1081C49656B003A2DE2 /* level14.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8450A0FB1C49656B003A2DE2 /* level14.txt */; };
+		8450A1091C49656B003A2DE2 /* level15.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8450A0FC1C49656B003A2DE2 /* level15.txt */; };
+		8450A10A1C49656B003A2DE2 /* level16.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8450A0FD1C49656B003A2DE2 /* level16.txt */; };
+		8450A10B1C49656B003A2DE2 /* level17.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8450A0FE1C49656B003A2DE2 /* level17.txt */; };
+		8450A10C1C49656B003A2DE2 /* level18.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8450A0FF1C49656B003A2DE2 /* level18.txt */; };
+		8450A10D1C49656B003A2DE2 /* level19.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8450A1001C49656B003A2DE2 /* level19.txt */; };
+		8450A10E1C49656B003A2DE2 /* level20.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8450A1011C49656B003A2DE2 /* level20.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,10 +49,37 @@
 		8450A0BD1C42EC45003A2DE2 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		8450A0BF1C42EC45003A2DE2 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		8450A0C11C42EC45003A2DE2 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		8450A0C41C42EC45003A2DE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8450A0C61C42EC45003A2DE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8450A0C91C42EC45003A2DE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8450A0CB1C42EC45003A2DE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8450A0D11C42ED01003A2DE2 /* Connector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connector.swift; sourceTree = "<group>"; };
+		8450A0D21C42ED01003A2DE2 /* LevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelViewController.swift; sourceTree = "<group>"; };
+		8450A0D31C42ED01003A2DE2 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		8450A0D41C42ED01003A2DE2 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		8450A0DB1C45E091003A2DE2 /* level1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level1.txt; sourceTree = "<group>"; };
+		8450A0DE1C46CAA7003A2DE2 /* level2.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level2.txt; sourceTree = "<group>"; };
+		8450A0DF1C46CAA7003A2DE2 /* level3.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level3.txt; sourceTree = "<group>"; };
+		8450A0E01C46CAA7003A2DE2 /* level4.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level4.txt; sourceTree = "<group>"; };
+		8450A0E11C46CAA7003A2DE2 /* level5.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level5.txt; sourceTree = "<group>"; };
+		8450A0E21C46CAA7003A2DE2 /* level6.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level6.txt; sourceTree = "<group>"; };
+		8450A0E31C46CAA7003A2DE2 /* level7.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level7.txt; sourceTree = "<group>"; };
+		8450A0EC1C46CB90003A2DE2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8450A0EF1C471E81003A2DE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8450A0F11C471EFE003A2DE2 /* EndGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndGameViewController.swift; sourceTree = "<group>"; };
+		8450A0F31C480FB7003A2DE2 /* GameOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
+		8450A0F51C49656B003A2DE2 /* level8.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level8.txt; sourceTree = "<group>"; };
+		8450A0F61C49656B003A2DE2 /* level9.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level9.txt; sourceTree = "<group>"; };
+		8450A0F71C49656B003A2DE2 /* level10.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level10.txt; sourceTree = "<group>"; };
+		8450A0F81C49656B003A2DE2 /* level11.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level11.txt; sourceTree = "<group>"; };
+		8450A0F91C49656B003A2DE2 /* level12.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level12.txt; sourceTree = "<group>"; };
+		8450A0FA1C49656B003A2DE2 /* level13.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level13.txt; sourceTree = "<group>"; };
+		8450A0FB1C49656B003A2DE2 /* level14.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level14.txt; sourceTree = "<group>"; };
+		8450A0FC1C49656B003A2DE2 /* level15.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level15.txt; sourceTree = "<group>"; };
+		8450A0FD1C49656B003A2DE2 /* level16.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level16.txt; sourceTree = "<group>"; };
+		8450A0FE1C49656B003A2DE2 /* level17.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level17.txt; sourceTree = "<group>"; };
+		8450A0FF1C49656B003A2DE2 /* level18.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level18.txt; sourceTree = "<group>"; };
+		8450A1001C49656B003A2DE2 /* level19.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level19.txt; sourceTree = "<group>"; };
+		8450A1011C49656B003A2DE2 /* level20.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level20.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,12 +116,47 @@
 				8450A0BD1C42EC45003A2DE2 /* GameScene.sks */,
 				8450A0BF1C42EC45003A2DE2 /* GameScene.swift */,
 				8450A0C11C42EC45003A2DE2 /* GameViewController.swift */,
-				8450A0C31C42EC45003A2DE2 /* Main.storyboard */,
+				8450A0D21C42ED01003A2DE2 /* LevelViewController.swift */,
+				8450A0D41C42ED01003A2DE2 /* MainViewController.swift */,
+				8450A0F11C471EFE003A2DE2 /* EndGameViewController.swift */,
+				8450A0F31C480FB7003A2DE2 /* GameOverViewController.swift */,
+				8450A0D11C42ED01003A2DE2 /* Connector.swift */,
+				8450A0D31C42ED01003A2DE2 /* Line.swift */,
+				8450A0EC1C46CB90003A2DE2 /* User.swift */,
+				8450A0EE1C471E81003A2DE2 /* Main.storyboard */,
+				8450A0DD1C45E097003A2DE2 /* levels */,
 				8450A0C61C42EC45003A2DE2 /* Assets.xcassets */,
 				8450A0C81C42EC45003A2DE2 /* LaunchScreen.storyboard */,
 				8450A0CB1C42EC45003A2DE2 /* Info.plist */,
 			);
 			path = knotz;
+			sourceTree = "<group>";
+		};
+		8450A0DD1C45E097003A2DE2 /* levels */ = {
+			isa = PBXGroup;
+			children = (
+				8450A0DB1C45E091003A2DE2 /* level1.txt */,
+				8450A0DE1C46CAA7003A2DE2 /* level2.txt */,
+				8450A0DF1C46CAA7003A2DE2 /* level3.txt */,
+				8450A0E01C46CAA7003A2DE2 /* level4.txt */,
+				8450A0E11C46CAA7003A2DE2 /* level5.txt */,
+				8450A0E21C46CAA7003A2DE2 /* level6.txt */,
+				8450A0E31C46CAA7003A2DE2 /* level7.txt */,
+				8450A0F51C49656B003A2DE2 /* level8.txt */,
+				8450A0F61C49656B003A2DE2 /* level9.txt */,
+				8450A0F71C49656B003A2DE2 /* level10.txt */,
+				8450A0F81C49656B003A2DE2 /* level11.txt */,
+				8450A0F91C49656B003A2DE2 /* level12.txt */,
+				8450A0FA1C49656B003A2DE2 /* level13.txt */,
+				8450A0FB1C49656B003A2DE2 /* level14.txt */,
+				8450A0FC1C49656B003A2DE2 /* level15.txt */,
+				8450A0FD1C49656B003A2DE2 /* level16.txt */,
+				8450A0FE1C49656B003A2DE2 /* level17.txt */,
+				8450A0FF1C49656B003A2DE2 /* level18.txt */,
+				8450A1001C49656B003A2DE2 /* level19.txt */,
+				8450A1011C49656B003A2DE2 /* level20.txt */,
+			);
+			name = levels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,10 +217,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8450A0E81C46CAA7003A2DE2 /* level6.txt in Resources */,
+				8450A0E91C46CAA7003A2DE2 /* level7.txt in Resources */,
+				8450A1091C49656B003A2DE2 /* level15.txt in Resources */,
+				8450A0E51C46CAA7003A2DE2 /* level3.txt in Resources */,
+				8450A0DC1C45E091003A2DE2 /* level1.txt in Resources */,
+				8450A1061C49656B003A2DE2 /* level12.txt in Resources */,
+				8450A10C1C49656B003A2DE2 /* level18.txt in Resources */,
+				8450A1071C49656B003A2DE2 /* level13.txt in Resources */,
+				8450A1031C49656B003A2DE2 /* level9.txt in Resources */,
 				8450A0BE1C42EC45003A2DE2 /* GameScene.sks in Resources */,
+				8450A0F01C471E81003A2DE2 /* Main.storyboard in Resources */,
+				8450A10B1C49656B003A2DE2 /* level17.txt in Resources */,
+				8450A1051C49656B003A2DE2 /* level11.txt in Resources */,
+				8450A1081C49656B003A2DE2 /* level14.txt in Resources */,
+				8450A10A1C49656B003A2DE2 /* level16.txt in Resources */,
+				8450A0E41C46CAA7003A2DE2 /* level2.txt in Resources */,
+				8450A0E61C46CAA7003A2DE2 /* level4.txt in Resources */,
+				8450A1021C49656B003A2DE2 /* level8.txt in Resources */,
+				8450A1041C49656B003A2DE2 /* level10.txt in Resources */,
+				8450A10E1C49656B003A2DE2 /* level20.txt in Resources */,
+				8450A10D1C49656B003A2DE2 /* level19.txt in Resources */,
+				8450A0E71C46CAA7003A2DE2 /* level5.txt in Resources */,
 				8450A0CA1C42EC45003A2DE2 /* LaunchScreen.storyboard in Resources */,
 				8450A0C71C42EC45003A2DE2 /* Assets.xcassets in Resources */,
-				8450A0C51C42EC45003A2DE2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,29 +251,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8450A0D81C42ED01003A2DE2 /* MainViewController.swift in Sources */,
 				8450A0C01C42EC45003A2DE2 /* GameScene.swift in Sources */,
+				8450A0D61C42ED01003A2DE2 /* LevelViewController.swift in Sources */,
+				8450A0D51C42ED01003A2DE2 /* Connector.swift in Sources */,
+				8450A0F41C480FB7003A2DE2 /* GameOverViewController.swift in Sources */,
+				8450A0ED1C46CB90003A2DE2 /* User.swift in Sources */,
+				8450A0D71C42ED01003A2DE2 /* Line.swift in Sources */,
 				8450A0C21C42EC45003A2DE2 /* GameViewController.swift in Sources */,
 				8450A0BC1C42EC45003A2DE2 /* AppDelegate.swift in Sources */,
+				8450A0F21C471EFE003A2DE2 /* EndGameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8450A0C31C42EC45003A2DE2 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8450A0C41C42EC45003A2DE2 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8450A0C81C42EC45003A2DE2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				8450A0C91C42EC45003A2DE2 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8450A0EE1C471E81003A2DE2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8450A0EF1C471E81003A2DE2 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -258,9 +374,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = knotz/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prestonwprice.knotz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -269,9 +387,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = knotz/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prestonwprice.knotz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -294,6 +414,7 @@
 				8450A0D01C42EC45003A2DE2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
