@@ -31,10 +31,16 @@ class MainViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "play" {
             if let destination = segue.destinationViewController as? LevelViewController {
-                //print(destination.buttons)
+                
+                
+                
                 destination.maxLevelCompleted = maxLevel!
             }
         }
+    }
+    
+    @IBAction func returnToMainMenu(segue: UIStoryboardSegue) {
+        maxLevel = user.loadSaved()
     }
     
 }

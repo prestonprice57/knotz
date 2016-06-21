@@ -11,7 +11,6 @@
 		8450A0BE1C42EC45003A2DE2 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8450A0BD1C42EC45003A2DE2 /* GameScene.sks */; };
 		8450A0C01C42EC45003A2DE2 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A0BF1C42EC45003A2DE2 /* GameScene.swift */; };
 		8450A0C21C42EC45003A2DE2 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A0C11C42EC45003A2DE2 /* GameViewController.swift */; };
-		8450A0C71C42EC45003A2DE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8450A0C61C42EC45003A2DE2 /* Assets.xcassets */; };
 		8450A0CA1C42EC45003A2DE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8450A0C81C42EC45003A2DE2 /* LaunchScreen.storyboard */; };
 		8450A0D51C42ED01003A2DE2 /* Connector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A0D11C42ED01003A2DE2 /* Connector.swift */; };
 		8450A0D61C42ED01003A2DE2 /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A0D21C42ED01003A2DE2 /* LevelViewController.swift */; };
@@ -41,6 +40,12 @@
 		8450A10C1C49656B003A2DE2 /* level18.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8450A0FF1C49656B003A2DE2 /* level18.txt */; };
 		8450A10D1C49656B003A2DE2 /* level19.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8450A1001C49656B003A2DE2 /* level19.txt */; };
 		8450A10E1C49656B003A2DE2 /* level20.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8450A1011C49656B003A2DE2 /* level20.txt */; };
+		8450A1101C4980B3003A2DE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8450A10F1C4980B3003A2DE2 /* Assets.xcassets */; };
+		8450A1151C4C0C59003A2DE2 /* level21.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8450A1111C4C0C59003A2DE2 /* level21.txt */; };
+		8450A1161C4C0C59003A2DE2 /* level22.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8450A1121C4C0C59003A2DE2 /* level22.txt */; };
+		8450A1171C4C0C59003A2DE2 /* level23.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8450A1131C4C0C59003A2DE2 /* level23.txt */; };
+		8450A1181C4C0C59003A2DE2 /* level24.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8450A1141C4C0C59003A2DE2 /* level24.txt */; };
+		92EA14BA2829152137E95239 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD44ECBEC594DA9DC7AF907C /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,7 +54,6 @@
 		8450A0BD1C42EC45003A2DE2 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		8450A0BF1C42EC45003A2DE2 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		8450A0C11C42EC45003A2DE2 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		8450A0C61C42EC45003A2DE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8450A0C91C42EC45003A2DE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8450A0CB1C42EC45003A2DE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8450A0D11C42ED01003A2DE2 /* Connector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connector.swift; sourceTree = "<group>"; };
@@ -80,6 +84,15 @@
 		8450A0FF1C49656B003A2DE2 /* level18.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level18.txt; sourceTree = "<group>"; };
 		8450A1001C49656B003A2DE2 /* level19.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level19.txt; sourceTree = "<group>"; };
 		8450A1011C49656B003A2DE2 /* level20.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level20.txt; sourceTree = "<group>"; };
+		8450A10F1C4980B3003A2DE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8450A1111C4C0C59003A2DE2 /* level21.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level21.txt; sourceTree = "<group>"; };
+		8450A1121C4C0C59003A2DE2 /* level22.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level22.txt; sourceTree = "<group>"; };
+		8450A1131C4C0C59003A2DE2 /* level23.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level23.txt; sourceTree = "<group>"; };
+		8450A1141C4C0C59003A2DE2 /* level24.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level24.txt; sourceTree = "<group>"; };
+		8466FBB61C4DAB0E00E9C5E1 /* knotz-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "knotz-Bridging-Header.h"; sourceTree = "<group>"; };
+		9E38735A034ED5DE67322C79 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		B650C7249B19A6511ECE31EC /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		DD44ECBEC594DA9DC7AF907C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,17 +100,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92EA14BA2829152137E95239 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		50E5B7666B46A3DB9BDFE5A2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9E38735A034ED5DE67322C79 /* Pods.debug.xcconfig */,
+				B650C7249B19A6511ECE31EC /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8450A0AF1C42EC45003A2DE2 = {
 			isa = PBXGroup;
 			children = (
 				8450A0BA1C42EC45003A2DE2 /* knotz */,
 				8450A0B91C42EC45003A2DE2 /* Products */,
+				50E5B7666B46A3DB9BDFE5A2 /* Pods */,
+				901EF9B8D4845463F701D187 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +137,7 @@
 		8450A0BA1C42EC45003A2DE2 /* knotz */ = {
 			isa = PBXGroup;
 			children = (
+				8466FBB61C4DAB0E00E9C5E1 /* knotz-Bridging-Header.h */,
 				8450A0BB1C42EC45003A2DE2 /* AppDelegate.swift */,
 				8450A0BD1C42EC45003A2DE2 /* GameScene.sks */,
 				8450A0BF1C42EC45003A2DE2 /* GameScene.swift */,
@@ -124,8 +150,8 @@
 				8450A0D31C42ED01003A2DE2 /* Line.swift */,
 				8450A0EC1C46CB90003A2DE2 /* User.swift */,
 				8450A0EE1C471E81003A2DE2 /* Main.storyboard */,
+				8450A10F1C4980B3003A2DE2 /* Assets.xcassets */,
 				8450A0DD1C45E097003A2DE2 /* levels */,
-				8450A0C61C42EC45003A2DE2 /* Assets.xcassets */,
 				8450A0C81C42EC45003A2DE2 /* LaunchScreen.storyboard */,
 				8450A0CB1C42EC45003A2DE2 /* Info.plist */,
 			);
@@ -155,8 +181,20 @@
 				8450A0FF1C49656B003A2DE2 /* level18.txt */,
 				8450A1001C49656B003A2DE2 /* level19.txt */,
 				8450A1011C49656B003A2DE2 /* level20.txt */,
+				8450A1111C4C0C59003A2DE2 /* level21.txt */,
+				8450A1121C4C0C59003A2DE2 /* level22.txt */,
+				8450A1131C4C0C59003A2DE2 /* level23.txt */,
+				8450A1141C4C0C59003A2DE2 /* level24.txt */,
 			);
 			name = levels;
+			sourceTree = "<group>";
+		};
+		901EF9B8D4845463F701D187 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DD44ECBEC594DA9DC7AF907C /* libPods.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,9 +204,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8450A0CE1C42EC45003A2DE2 /* Build configuration list for PBXNativeTarget "knotz" */;
 			buildPhases = (
+				18A6DA2F61CE508F72271400 /* Check Pods Manifest.lock */,
 				8450A0B41C42EC45003A2DE2 /* Sources */,
 				8450A0B51C42EC45003A2DE2 /* Frameworks */,
 				8450A0B61C42EC45003A2DE2 /* Resources */,
+				1078B90EE1E81DC6B48C57D3 /* Embed Pods Frameworks */,
+				5C918802A0193545CF729997 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -222,7 +263,9 @@
 				8450A1091C49656B003A2DE2 /* level15.txt in Resources */,
 				8450A0E51C46CAA7003A2DE2 /* level3.txt in Resources */,
 				8450A0DC1C45E091003A2DE2 /* level1.txt in Resources */,
+				8450A1151C4C0C59003A2DE2 /* level21.txt in Resources */,
 				8450A1061C49656B003A2DE2 /* level12.txt in Resources */,
+				8450A1161C4C0C59003A2DE2 /* level22.txt in Resources */,
 				8450A10C1C49656B003A2DE2 /* level18.txt in Resources */,
 				8450A1071C49656B003A2DE2 /* level13.txt in Resources */,
 				8450A1031C49656B003A2DE2 /* level9.txt in Resources */,
@@ -231,20 +274,70 @@
 				8450A10B1C49656B003A2DE2 /* level17.txt in Resources */,
 				8450A1051C49656B003A2DE2 /* level11.txt in Resources */,
 				8450A1081C49656B003A2DE2 /* level14.txt in Resources */,
+				8450A1171C4C0C59003A2DE2 /* level23.txt in Resources */,
 				8450A10A1C49656B003A2DE2 /* level16.txt in Resources */,
 				8450A0E41C46CAA7003A2DE2 /* level2.txt in Resources */,
 				8450A0E61C46CAA7003A2DE2 /* level4.txt in Resources */,
 				8450A1021C49656B003A2DE2 /* level8.txt in Resources */,
 				8450A1041C49656B003A2DE2 /* level10.txt in Resources */,
 				8450A10E1C49656B003A2DE2 /* level20.txt in Resources */,
+				8450A1181C4C0C59003A2DE2 /* level24.txt in Resources */,
 				8450A10D1C49656B003A2DE2 /* level19.txt in Resources */,
 				8450A0E71C46CAA7003A2DE2 /* level5.txt in Resources */,
+				8450A1101C4980B3003A2DE2 /* Assets.xcassets in Resources */,
 				8450A0CA1C42EC45003A2DE2 /* LaunchScreen.storyboard in Resources */,
-				8450A0C71C42EC45003A2DE2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1078B90EE1E81DC6B48C57D3 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		18A6DA2F61CE508F72271400 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5C918802A0193545CF729997 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8450A0B41C42EC45003A2DE2 /* Sources */ = {
@@ -371,27 +464,33 @@
 		};
 		8450A0CF1C42EC45003A2DE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E38735A034ED5DE67322C79 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = knotz/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prestonwprice.knotz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_OBJC_BRIDGING_HEADER = "knotz-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		8450A0D01C42EC45003A2DE2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B650C7249B19A6511ECE31EC /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = knotz/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prestonwprice.knotz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SWIFT_OBJC_BRIDGING_HEADER = "knotz-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -16,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        AdColony.configureWithAppID("appea1a47db314146f6ab", zoneIDs: ["vz9eecf4a90d0745098f"], delegate: nil, logging: true)
+        
         return true
     }
 

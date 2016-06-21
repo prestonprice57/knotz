@@ -8,19 +8,30 @@
 
 import UIKit
 import SpriteKit
+import GoogleMobileAds
 
 class GameViewController: UIViewController {
     
+    @IBOutlet weak var bannerView: GADBannerView!
+    
+    @IBOutlet weak var label1: UILabel!
+    @IBOutlet weak var label2: UILabel!
+    
     var level = 0
+    var skView: SKView!
     
     @IBOutlet weak var movesLeft: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.bannerView.adUnitID = "ca-app-pub-2794069200159212/1016212489"
+        self.bannerView.rootViewController = self
+        self.bannerView.loadRequest(GADRequest())
+        
         if let scene = GameScene(fileNamed:"GameScene") {
             // Configure the view.
-            let skView = self.view as! SKView
+            skView = self.view as! SKView
             
             /* Sprite Kit applies additional optimizations to improve rendering performance */
             skView.ignoresSiblingOrder = true
@@ -35,18 +46,6 @@ class GameViewController: UIViewController {
             scene.screenWidth = self.view.bounds.maxX
             
             skView.presentScene(scene)
-        }
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "gameEnded" {
-            if let destination = segue.destinationViewController as? EndGameViewController {
-                destination.level = self.level
-                
-                if let send = sender as? GameScene {
-                    destination.stars = send.determineStars()
-                }
-            }
         }
     }
     
@@ -70,4 +69,9 @@ class GameViewController: UIViewController {
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
+    
+    override func viewDidDisappear(animated: Bool) {
+    }
+    
+    
 }

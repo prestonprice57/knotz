@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import GoogleMobileAds
 
 class LevelViewController: UIViewController {
     
@@ -15,19 +16,38 @@ class LevelViewController: UIViewController {
     var maxLevelCompleted: Int!
     
     override func viewWillAppear(animated: Bool) {
-        print(buttons.count)
         
+        
+    }
+    
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // disable or enable buttons
         for (i, button) in buttons.enumerate() {
             if i < maxLevelCompleted {
                 button.enabled = true
             } else {
                 button.enabled = false
-                button.backgroundColor = UIColor.grayColor()
             }
         }
-    }
-    override func viewDidLoad() {
-        super.viewDidLoad()
+        
+        let user = User(maxLevel: maxLevelCompleted)
+        let starsPerLevel = user.loadSavedStarArray()
+        
+        for (i, stars) in starsPerLevel.enumerate() {
+            if stars == 1 {
+                buttons[i].setBackgroundImage(UIImage(named: "1star.png"), forState: UIControlState.Normal)
+            } else if stars == 2 {
+                buttons[i].setBackgroundImage(UIImage(named: "2star.png"), forState: UIControlState.Normal)
+            } else if stars == 3 {
+                buttons[i].setBackgroundImage(UIImage(named: "3star.png"), forState: UIControlState.Normal)
+            } else {
+                buttons[i].setBackgroundImage(UIImage(named: "0star.png"), forState: UIControlState.Normal)
+            }
+        }
+
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -40,6 +60,10 @@ class LevelViewController: UIViewController {
         }
     }
     
+    @IBAction func returnToLevelView(segue: UIStoryboardSegue) {
+        let user = User(maxLevel: 1)
+        maxLevelCompleted = user.loadSaved()
+    }
     /*override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
         print("this worked")
         return false

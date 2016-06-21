@@ -35,6 +35,16 @@ class GameScene: SKScene {
     }
     
     func loadLevel(levelNumber: Int) {
+        self.level = levelNumber
+        
+        if levelNumber == 1 {
+            viewController!.label1.hidden = false
+            viewController!.label2.hidden = false
+        } else {
+            viewController!.label1.hidden = true
+            viewController!.label2.hidden = true
+        }
+        
         let destinationFile = "level\(levelNumber)"
         if let filepath = NSBundle.mainBundle().pathForResource(destinationFile, ofType: "txt") {
             do {
@@ -111,21 +121,21 @@ class GameScene: SKScene {
         CGPathAddLineToPoint(line.path, nil, line.lineEnd.x, line.lineEnd.y)
         line.lineShape.path = line.path
         line.lineShape.lineWidth = 7
-        line.lineShape.strokeColor = UIColor.blackColor()
+        line.lineShape.strokeColor = UIColor(red: 0.0, green: 122.0/255.0, blue: 255.0, alpha: 1.0)
         
         self.addChild(line.lineShape)
     }
     
     func drawConnector(connector: Connector, connectorNumber: String) {
         connector.circle = SKShapeNode(circleOfRadius: 10)
-        connector.circleTouchArea = SKShapeNode(circleOfRadius: 20)
+        connector.circleTouchArea = SKShapeNode(circleOfRadius: 25)
         
         drawLine(connector.lineOut)
         connector.circle.position = CGPointMake(connector.lineIn.lineEnd.x, connector.lineIn.lineEnd.y)
         connector.circle.fillColor = UIColor.whiteColor()
         connector.circle.zPosition = 100
         connector.circle.name = "circle" + connectorNumber
-        connector.circle.strokeColor = UIColor.blackColor()
+        connector.circle.strokeColor = UIColor(red: 0.0, green: 122.0/255.0, blue: 255.0, alpha: 1.0)
         
         connector.circleTouchArea.position = connector.circle.position
         connector.circleTouchArea.fillColor = UIColor.clearColor()
@@ -261,22 +271,25 @@ class GameScene: SKScene {
                 let redColor = UIColor(red: 1.0, green: 0.45, blue: 0.45, alpha: 1.0)
                 line.lineShape.strokeColor = redColor
             } else {
-                let greenColor = UIColor(red: 200/256, green: 247/256, blue: 197/256, alpha: 1.0)
-                line.lineShape.strokeColor = greenColor
+                let blueColor = UIColor(red: 0.0, green: 122.0/255.0, blue: 255.0, alpha: 1.0)
+                line.lineShape.strokeColor = blueColor
             }
             line.hasCollision = 0
         }
         
         if collisions == 0 {
             // game completed
-            let seconds = 2.0
+            let seconds = 0.7
             let delay = seconds * Double(NSEC_PER_SEC)  // nanoseconds per seconds
             let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
             
             dispatch_after(dispatchTime, dispatch_get_main_queue(), {
                 
                 self.viewController!.performSegueWithIdentifier("gameEnded", sender: self)
+                let endGame = self.viewController!.presentedViewController as! EndGameViewController
                 
+                endGame.level = self.level++
+                endGame.stars = self.determineStars()
             })
         }
         
@@ -286,13 +299,17 @@ class GameScene: SKScene {
         
         if movesAllowed <= 0 {
             
-            let seconds = 2.0
+            let seconds = 0.7
             let delay = seconds * Double(NSEC_PER_SEC)  // nanoseconds per seconds
             let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
             
             dispatch_after(dispatchTime, dispatch_get_main_queue(), {
                 self.viewController!.performSegueWithIdentifier("gameOver", sender: self)
-                self.restartLevel(self.level)
+                
+                
+                /*dispatch_after(dispatchTime2, dispatch_get_main_queue(), {
+                    self.restartLevel(self.level)
+                })*/
             })
             
             
