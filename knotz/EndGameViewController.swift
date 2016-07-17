@@ -32,23 +32,23 @@ class EndGameViewController: UIViewController {
         
         self.bannerView.adUnitID = "ca-app-pub-2794069200159212/9876611683"
         self.bannerView.rootViewController = self
-        self.bannerView.loadRequest(GADRequest())
+        self.bannerView.load(GADRequest())
         
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         let gameView = self.presentingViewController as! GameViewController
         let gameScene = gameView.skView.scene as! GameScene
         
         level = gameScene.level
 
         if level > 24 {
-            nextLevel.hidden = true
+            nextLevel.isHidden = true
             //menuButton.hidden = true
             
-            star1.hidden = true
-            star2.hidden = true
-            star3.hidden = true
+            star1.isHidden = true
+            star2.isHidden = true
+            star3.isHidden = true
             
             levelText.text = "Congratulations!"
             completedText.text = "You beat all the levels!"
@@ -68,15 +68,17 @@ class EndGameViewController: UIViewController {
     }
     
     
-    @IBAction func nextTapped(sender: AnyObject) {
+    @IBAction func nextTapped(_ sender: AnyObject) {
         let gameView = self.presentingViewController as! GameViewController
         let gameScene = gameView.skView.scene as! GameScene
-        gameScene.restartLevel(gameScene.level++)
         
-        self.dismissViewControllerAnimated(true, completion: nil)
+        gameScene.level += 1
+        gameScene.restartLevel(gameScene.level)
+        
+        self.dismiss(animated: true, completion: nil)
     }
     
-    func displayStars(user: User) {
+    func displayStars(_ user: User) {
         var starsPerLevel = user.loadSavedStarArray()
         
         if stars == 1 {
