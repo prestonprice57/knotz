@@ -13,7 +13,7 @@ class Line: NSObject {
     var lineEnd: CGPoint
     var lineCoordinates: [CGPoint]
     var lineShape: SKShapeNode = SKShapeNode()
-    var path = CGPathCreateMutable()
+    var path = CGMutablePath()
     var hasCollision = 0
     
     init(lineStart: CGPoint, lineEnd: CGPoint) {

@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E8188CF1D3C6B73008CB26E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E8188CE1D3C6B73008CB26E /* GoogleService-Info.plist */; };
+		1E9A8A3B1D3DA2BA005C5CC7 /* KnotzNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9A8A3A1D3DA2BA005C5CC7 /* KnotzNavigationBar.swift */; };
+		1EA5B66C1D3C63AF00C6A4B2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA5B66B1D3C63AF00C6A4B2 /* LoginViewController.swift */; };
+		1ED9F0651D3C6EF500B2BE62 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ED9F0631D3C6EF500B2BE62 /* FBSDKCoreKit.framework */; };
+		1ED9F0661D3C6EF500B2BE62 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ED9F0641D3C6EF500B2BE62 /* FBSDKLoginKit.framework */; };
 		8450A0BC1C42EC45003A2DE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A0BB1C42EC45003A2DE2 /* AppDelegate.swift */; };
 		8450A0BE1C42EC45003A2DE2 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8450A0BD1C42EC45003A2DE2 /* GameScene.sks */; };
 		8450A0C01C42EC45003A2DE2 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A0BF1C42EC45003A2DE2 /* GameScene.swift */; };
 		8450A0C21C42EC45003A2DE2 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A0C11C42EC45003A2DE2 /* GameViewController.swift */; };
-		8450A0C71C42EC45003A2DE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8450A0C61C42EC45003A2DE2 /* Assets.xcassets */; };
 		8450A0CA1C42EC45003A2DE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8450A0C81C42EC45003A2DE2 /* LaunchScreen.storyboard */; };
 		8450A0D51C42ED01003A2DE2 /* Connector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A0D11C42ED01003A2DE2 /* Connector.swift */; };
 		8450A0D61C42ED01003A2DE2 /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A0D21C42ED01003A2DE2 /* LevelViewController.swift */; };
@@ -41,15 +45,26 @@
 		8450A10C1C49656B003A2DE2 /* level18.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8450A0FF1C49656B003A2DE2 /* level18.txt */; };
 		8450A10D1C49656B003A2DE2 /* level19.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8450A1001C49656B003A2DE2 /* level19.txt */; };
 		8450A10E1C49656B003A2DE2 /* level20.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8450A1011C49656B003A2DE2 /* level20.txt */; };
+		8450A1101C4980B3003A2DE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8450A10F1C4980B3003A2DE2 /* Assets.xcassets */; };
+		8450A1151C4C0C59003A2DE2 /* level21.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8450A1111C4C0C59003A2DE2 /* level21.txt */; };
+		8450A1161C4C0C59003A2DE2 /* level22.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8450A1121C4C0C59003A2DE2 /* level22.txt */; };
+		8450A1171C4C0C59003A2DE2 /* level23.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8450A1131C4C0C59003A2DE2 /* level23.txt */; };
+		8450A1181C4C0C59003A2DE2 /* level24.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8450A1141C4C0C59003A2DE2 /* level24.txt */; };
+		E02EDE26A4A3325B8AD51515 /* libPods-knotz.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DD1684FB63F2E5360963F7ED /* libPods-knotz.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E8188CE1D3C6B73008CB26E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1E9A8A3A1D3DA2BA005C5CC7 /* KnotzNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnotzNavigationBar.swift; sourceTree = "<group>"; };
+		1EA5B66B1D3C63AF00C6A4B2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		1ED9F0631D3C6EF500B2BE62 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		1ED9F0641D3C6EF500B2BE62 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		701E276E28C7781BE4D5A972 /* Pods-knotz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-knotz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-knotz/Pods-knotz.debug.xcconfig"; sourceTree = "<group>"; };
 		8450A0B81C42EC45003A2DE2 /* knotz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = knotz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8450A0BB1C42EC45003A2DE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8450A0BD1C42EC45003A2DE2 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		8450A0BF1C42EC45003A2DE2 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		8450A0C11C42EC45003A2DE2 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
-		8450A0C61C42EC45003A2DE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8450A0C91C42EC45003A2DE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8450A0CB1C42EC45003A2DE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8450A0D11C42ED01003A2DE2 /* Connector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connector.swift; sourceTree = "<group>"; };
@@ -80,6 +95,13 @@
 		8450A0FF1C49656B003A2DE2 /* level18.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level18.txt; sourceTree = "<group>"; };
 		8450A1001C49656B003A2DE2 /* level19.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level19.txt; sourceTree = "<group>"; };
 		8450A1011C49656B003A2DE2 /* level20.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level20.txt; sourceTree = "<group>"; };
+		8450A10F1C4980B3003A2DE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8450A1111C4C0C59003A2DE2 /* level21.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level21.txt; sourceTree = "<group>"; };
+		8450A1121C4C0C59003A2DE2 /* level22.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level22.txt; sourceTree = "<group>"; };
+		8450A1131C4C0C59003A2DE2 /* level23.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level23.txt; sourceTree = "<group>"; };
+		8450A1141C4C0C59003A2DE2 /* level24.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = level24.txt; sourceTree = "<group>"; };
+		A71CB6AC52D223B6D372F8C5 /* Pods-knotz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-knotz.release.xcconfig"; path = "Pods/Target Support Files/Pods-knotz/Pods-knotz.release.xcconfig"; sourceTree = "<group>"; };
+		DD1684FB63F2E5360963F7ED /* libPods-knotz.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-knotz.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,17 +109,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E02EDE26A4A3325B8AD51515 /* libPods-knotz.a in Frameworks */,
+				1ED9F0651D3C6EF500B2BE62 /* FBSDKCoreKit.framework in Frameworks */,
+				1ED9F0661D3C6EF500B2BE62 /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C0DF27ECFAA7DAA88304404 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				701E276E28C7781BE4D5A972 /* Pods-knotz.debug.xcconfig */,
+				A71CB6AC52D223B6D372F8C5 /* Pods-knotz.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8450A0AF1C42EC45003A2DE2 = {
 			isa = PBXGroup;
 			children = (
 				8450A0BA1C42EC45003A2DE2 /* knotz */,
 				8450A0B91C42EC45003A2DE2 /* Products */,
+				6C0DF27ECFAA7DAA88304404 /* Pods */,
+				902D8694488583A94FA66BBA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,18 +152,21 @@
 				8450A0BD1C42EC45003A2DE2 /* GameScene.sks */,
 				8450A0BF1C42EC45003A2DE2 /* GameScene.swift */,
 				8450A0C11C42EC45003A2DE2 /* GameViewController.swift */,
+				1EA5B66B1D3C63AF00C6A4B2 /* LoginViewController.swift */,
 				8450A0D21C42ED01003A2DE2 /* LevelViewController.swift */,
 				8450A0D41C42ED01003A2DE2 /* MainViewController.swift */,
 				8450A0F11C471EFE003A2DE2 /* EndGameViewController.swift */,
+				1E9A8A3A1D3DA2BA005C5CC7 /* KnotzNavigationBar.swift */,
 				8450A0F31C480FB7003A2DE2 /* GameOverViewController.swift */,
 				8450A0D11C42ED01003A2DE2 /* Connector.swift */,
 				8450A0D31C42ED01003A2DE2 /* Line.swift */,
 				8450A0EC1C46CB90003A2DE2 /* User.swift */,
 				8450A0EE1C471E81003A2DE2 /* Main.storyboard */,
+				8450A10F1C4980B3003A2DE2 /* Assets.xcassets */,
 				8450A0DD1C45E097003A2DE2 /* levels */,
-				8450A0C61C42EC45003A2DE2 /* Assets.xcassets */,
 				8450A0C81C42EC45003A2DE2 /* LaunchScreen.storyboard */,
 				8450A0CB1C42EC45003A2DE2 /* Info.plist */,
+				1E8188CE1D3C6B73008CB26E /* GoogleService-Info.plist */,
 			);
 			path = knotz;
 			sourceTree = "<group>";
@@ -155,8 +194,22 @@
 				8450A0FF1C49656B003A2DE2 /* level18.txt */,
 				8450A1001C49656B003A2DE2 /* level19.txt */,
 				8450A1011C49656B003A2DE2 /* level20.txt */,
+				8450A1111C4C0C59003A2DE2 /* level21.txt */,
+				8450A1121C4C0C59003A2DE2 /* level22.txt */,
+				8450A1131C4C0C59003A2DE2 /* level23.txt */,
+				8450A1141C4C0C59003A2DE2 /* level24.txt */,
 			);
 			name = levels;
+			sourceTree = "<group>";
+		};
+		902D8694488583A94FA66BBA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1ED9F0631D3C6EF500B2BE62 /* FBSDKCoreKit.framework */,
+				1ED9F0641D3C6EF500B2BE62 /* FBSDKLoginKit.framework */,
+				DD1684FB63F2E5360963F7ED /* libPods-knotz.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,9 +219,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8450A0CE1C42EC45003A2DE2 /* Build configuration list for PBXNativeTarget "knotz" */;
 			buildPhases = (
+				E8B571579F4CF7145E7BC231 /* [CP] Check Pods Manifest.lock */,
 				8450A0B41C42EC45003A2DE2 /* Sources */,
 				8450A0B51C42EC45003A2DE2 /* Frameworks */,
 				8450A0B61C42EC45003A2DE2 /* Resources */,
+				4945D1F9AD448C0537E752F8 /* [CP] Embed Pods Frameworks */,
+				6A13836BED50464472A8CE72 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -191,6 +247,8 @@
 				TargetAttributes = {
 					8450A0B71C42EC45003A2DE2 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = QYGVUASNVQ;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -221,8 +279,11 @@
 				8450A0E91C46CAA7003A2DE2 /* level7.txt in Resources */,
 				8450A1091C49656B003A2DE2 /* level15.txt in Resources */,
 				8450A0E51C46CAA7003A2DE2 /* level3.txt in Resources */,
+				1E8188CF1D3C6B73008CB26E /* GoogleService-Info.plist in Resources */,
 				8450A0DC1C45E091003A2DE2 /* level1.txt in Resources */,
+				8450A1151C4C0C59003A2DE2 /* level21.txt in Resources */,
 				8450A1061C49656B003A2DE2 /* level12.txt in Resources */,
+				8450A1161C4C0C59003A2DE2 /* level22.txt in Resources */,
 				8450A10C1C49656B003A2DE2 /* level18.txt in Resources */,
 				8450A1071C49656B003A2DE2 /* level13.txt in Resources */,
 				8450A1031C49656B003A2DE2 /* level9.txt in Resources */,
@@ -231,20 +292,70 @@
 				8450A10B1C49656B003A2DE2 /* level17.txt in Resources */,
 				8450A1051C49656B003A2DE2 /* level11.txt in Resources */,
 				8450A1081C49656B003A2DE2 /* level14.txt in Resources */,
+				8450A1171C4C0C59003A2DE2 /* level23.txt in Resources */,
 				8450A10A1C49656B003A2DE2 /* level16.txt in Resources */,
 				8450A0E41C46CAA7003A2DE2 /* level2.txt in Resources */,
 				8450A0E61C46CAA7003A2DE2 /* level4.txt in Resources */,
 				8450A1021C49656B003A2DE2 /* level8.txt in Resources */,
 				8450A1041C49656B003A2DE2 /* level10.txt in Resources */,
 				8450A10E1C49656B003A2DE2 /* level20.txt in Resources */,
+				8450A1181C4C0C59003A2DE2 /* level24.txt in Resources */,
 				8450A10D1C49656B003A2DE2 /* level19.txt in Resources */,
 				8450A0E71C46CAA7003A2DE2 /* level5.txt in Resources */,
+				8450A1101C4980B3003A2DE2 /* Assets.xcassets in Resources */,
 				8450A0CA1C42EC45003A2DE2 /* LaunchScreen.storyboard in Resources */,
-				8450A0C71C42EC45003A2DE2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4945D1F9AD448C0537E752F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-knotz/Pods-knotz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A13836BED50464472A8CE72 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-knotz/Pods-knotz-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8B571579F4CF7145E7BC231 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8450A0B41C42EC45003A2DE2 /* Sources */ = {
@@ -253,6 +364,7 @@
 			files = (
 				8450A0D81C42ED01003A2DE2 /* MainViewController.swift in Sources */,
 				8450A0C01C42EC45003A2DE2 /* GameScene.swift in Sources */,
+				1E9A8A3B1D3DA2BA005C5CC7 /* KnotzNavigationBar.swift in Sources */,
 				8450A0D61C42ED01003A2DE2 /* LevelViewController.swift in Sources */,
 				8450A0D51C42ED01003A2DE2 /* Connector.swift in Sources */,
 				8450A0F41C480FB7003A2DE2 /* GameOverViewController.swift in Sources */,
@@ -261,6 +373,7 @@
 				8450A0C21C42EC45003A2DE2 /* GameViewController.swift in Sources */,
 				8450A0BC1C42EC45003A2DE2 /* AppDelegate.swift in Sources */,
 				8450A0F21C471EFE003A2DE2 /* EndGameViewController.swift in Sources */,
+				1EA5B66C1D3C63AF00C6A4B2 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,27 +484,67 @@
 		};
 		8450A0CF1C42EC45003A2DE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 701E276E28C7781BE4D5A972 /* Pods-knotz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(PODS_ROOT)/AdColony\"",
+					"\"${PODS_ROOT}/AdColony\"",
+					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks/frameworks\"",
+					"\"${PODS_ROOT}/FirebaseInstanceID/Frameworks\"",
+					"\"${PODS_ROOT}/Google-Mobile-Ads-SDK/GoogleMobileAdsSdkiOS-7.6.0\"",
+					"\"${PODS_ROOT}/GoogleInterchangeUtilities/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleSymbolUtilities/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleUtilities/Frameworks\"",
+					"~/Documents/FacebookSDK",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = knotz/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prestonwprice.knotz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "knotz-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		8450A0D01C42EC45003A2DE2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A71CB6AC52D223B6D372F8C5 /* Pods-knotz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(PODS_ROOT)/AdColony\"",
+					"\"${PODS_ROOT}/AdColony\"",
+					"\"${PODS_ROOT}/FirebaseAnalytics/Frameworks/frameworks\"",
+					"\"${PODS_ROOT}/FirebaseInstanceID/Frameworks\"",
+					"\"${PODS_ROOT}/Google-Mobile-Ads-SDK/GoogleMobileAdsSdkiOS-7.6.0\"",
+					"\"${PODS_ROOT}/GoogleInterchangeUtilities/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleSymbolUtilities/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleUtilities/Frameworks\"",
+					"~/Documents/FacebookSDK",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = knotz/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.prestonwprice.knotz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "knotz-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

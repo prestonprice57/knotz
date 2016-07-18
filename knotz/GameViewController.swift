@@ -8,25 +8,34 @@
 
 import UIKit
 import SpriteKit
+import GoogleMobileAds
 
 class GameViewController: UIViewController {
     
+    @IBOutlet weak var label1: UILabel!
+    @IBOutlet weak var label2: UILabel!
+    
     var level = 0
+    var skView: SKView!
     
     @IBOutlet weak var movesLeft: UILabel!
+    
+    @IBAction func babkButtonPressed(_ sender: AnyObject) {
+        self.performSegue(withIdentifier: "toLevelVC", sender: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if let scene = GameScene(fileNamed:"GameScene") {
             // Configure the view.
-            let skView = self.view as! SKView
+            skView = self.view as! SKView
             
             /* Sprite Kit applies additional optimizations to improve rendering performance */
             skView.ignoresSiblingOrder = true
             
             /* Set the scale mode to scale to fit the window */
-            scene.scaleMode = .AspectFill
+            scene.scaleMode = .aspectFill
             scene.size = skView.bounds.size
             scene.viewController = self
             scene.level = self.level
@@ -38,15 +47,17 @@ class GameViewController: UIViewController {
         }
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "gameEnded" {
-            if let destination = segue.destinationViewController as? EndGameViewController {
-                destination.level = self.level
-                
-                if let send = sender as? GameScene {
-                    destination.stars = send.determineStars()
-                }
+    override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "toLevelVC" {
+            for subview in self.view.subviews {
+                print(subview)
+                subview.removeFromSuperview()
             }
+            skView.scene?.removeAllActions()
+            skView.scene?.removeAllChildren()
+            skView.presentScene(nil)
+            //self.bannerView = nil
+            
         }
     }
     
@@ -55,10 +66,10 @@ class GameViewController: UIViewController {
     }
     
     override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-        if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
-            return .AllButUpsideDown
+        if UIDevice.current().userInterfaceIdiom == .phone {
+            return .allButUpsideDown
         } else {
-            return .All
+            return .all
         }
     }
     
@@ -70,4 +81,14 @@ class GameViewController: UIViewController {
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+    }
+    
+    
 }

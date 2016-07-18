@@ -7,26 +7,47 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class GameOverViewController: UIViewController {
     
     @IBOutlet weak var restartButton: UIButton!
     @IBOutlet weak var mainMenu: UIButton!
+    @IBOutlet weak var skipButton: UIButton!
     
-    @IBAction func restartClicked(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: {})
+    
+    @IBAction func skipPressed(_ sender: AnyObject) {
+        let gameView = self.presentingViewController as! GameViewController
+        let gameScene = gameView.skView.scene as! GameScene
+        
+        let ac = UIAlertController(title: "Would you like to watch an ad to skip this level?", message: nil, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+        ac.addAction(UIAlertAction(title: "Yes", style: .default) { [unowned self] _ in
+            self.dismiss(animated: true) {
+                AdColony.playVideoAd(forZone: "vz9eecf4a90d0745098f", with: nil)
+            }
+        })
+        
+        
+        present(ac, animated: true, completion: nil)
+
+        gameScene.restartLevel(gameScene.level+1)
+        
+    }
+
+    
+    @IBAction func restartClicked(_ sender: AnyObject) {
+        let gameView = self.presentingViewController as! GameViewController
+        let gameScene = gameView.skView.scene as! GameScene
+        gameScene.restartLevel(gameScene.level)
+        
+        self.dismiss(animated: true, completion: nil)
         
     }
     
-    @IBAction func menuClicked(sender: AnyObject) {
-        
-    }
     
     override func viewDidLoad() {
-        restartButton.layer.borderWidth = 1.0
-        mainMenu.layer.borderWidth = 1.0
+        super.viewDidLoad()
         
-        restartButton.layer.borderColor = UIColor.blackColor().CGColor
-        mainMenu.layer.borderColor = UIColor.blackColor().CGColor
     }
 }

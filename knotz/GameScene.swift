@@ -30,31 +30,44 @@ class GameScene: SKScene {
     var starCount: [String]!
     var movesAllowed: Int! {
         didSet {
-            viewController!.movesLeft.text = String(movesAllowed)
+            viewController!.movesLeft.text = String(movesAllowed!)
         }
     }
     
-    func loadLevel(levelNumber: Int) {
+    func loadLevel(_ levelNumber: Int) {
+        self.removeAllActions()
+        self.removeAllChildren()
+        
+        self.level = levelNumber
+        
+        if levelNumber == 1 {
+            viewController!.label1.isHidden = false
+            viewController!.label2.isHidden = false
+        } else {
+            viewController!.label1.isHidden = true
+            viewController!.label2.isHidden = true
+        }
+        
         let destinationFile = "level\(levelNumber)"
-        if let filepath = NSBundle.mainBundle().pathForResource(destinationFile, ofType: "txt") {
+        if let filepath = Bundle.main.pathForResource(destinationFile, ofType: "txt") {
             do {
                 let contents = try NSString(contentsOfFile: filepath, usedEncoding: nil) as String
-                let coordinateArray = contents.componentsSeparatedByString("\n")
+                let coordinateArray = contents.components(separatedBy: "\n")
                 
-                for (i, num) in coordinateArray.enumerate() {
+                for (i, num) in coordinateArray.enumerated() {
                     
                     if i < coordinateArray.count-1 {
-                        let points = num.componentsSeparatedByString(" ")
+                        let points = num.components(separatedBy: " ")
                     
-                        if let x = NSNumberFormatter().numberFromString(points[0]) {
-                            if let y = NSNumberFormatter().numberFromString(points[1]) {
+                        if let x = NumberFormatter().number(from: points[0]) {
+                            if let y = NumberFormatter().number(from: points[1]) {
                                 let xFloat = CGFloat(x)*self.screenWidth
                                 let yFloat = CGFloat(y)*self.screenHeight
-                                self.coordinates.append(CGPointMake(xFloat, yFloat))
+                                self.coordinates.append(CGPoint(x: xFloat, y: yFloat))
                             }
                         }
                     } else {
-                        starCount = num.componentsSeparatedByString(" ")
+                        starCount = num.components(separatedBy: " ")
                         
                         movesAllowed = Int(starCount[0])
                         
@@ -72,7 +85,7 @@ class GameScene: SKScene {
         }
     }
     
-    override func didMoveToView(view: SKView) {
+    override func didMove(to view: SKView) {
         
         loadLevel(level)
         
@@ -106,46 +119,46 @@ class GameScene: SKScene {
         checkForCollision()
     }
     
-    func drawLine(line: Line) {
-        CGPathMoveToPoint(line.path, nil, line.lineStart.x, line.lineStart.y)
-        CGPathAddLineToPoint(line.path, nil, line.lineEnd.x, line.lineEnd.y)
+    func drawLine(_ line: Line) {
+        line.path.moveTo(nil, x: line.lineStart.x, y: line.lineStart.y)
+        line.path.addLineTo(nil, x: line.lineEnd.x, y: line.lineEnd.y)
         line.lineShape.path = line.path
         line.lineShape.lineWidth = 7
-        line.lineShape.strokeColor = UIColor.blackColor()
+        line.lineShape.strokeColor = UIColor(red: 0.0, green: 122.0/255.0, blue: 255.0, alpha: 1.0)
         
         self.addChild(line.lineShape)
     }
     
-    func drawConnector(connector: Connector, connectorNumber: String) {
+    func drawConnector(_ connector: Connector, connectorNumber: String) {
         connector.circle = SKShapeNode(circleOfRadius: 10)
-        connector.circleTouchArea = SKShapeNode(circleOfRadius: 20)
+        connector.circleTouchArea = SKShapeNode(circleOfRadius: 25)
         
         drawLine(connector.lineOut)
-        connector.circle.position = CGPointMake(connector.lineIn.lineEnd.x, connector.lineIn.lineEnd.y)
-        connector.circle.fillColor = UIColor.whiteColor()
+        connector.circle.position = CGPoint(x: connector.lineIn.lineEnd.x, y: connector.lineIn.lineEnd.y)
+        connector.circle.fillColor = UIColor.white()
         connector.circle.zPosition = 100
         connector.circle.name = "circle" + connectorNumber
-        connector.circle.strokeColor = UIColor.blackColor()
+        connector.circle.strokeColor = UIColor(red: 0.0, green: 122.0/255.0, blue: 255.0, alpha: 1.0)
         
         connector.circleTouchArea.position = connector.circle.position
-        connector.circleTouchArea.fillColor = UIColor.clearColor()
+        connector.circleTouchArea.fillColor = UIColor.clear()
         connector.circleTouchArea.name = "circle" + connectorNumber
-        connector.circleTouchArea.strokeColor = UIColor.clearColor()
+        connector.circleTouchArea.strokeColor = UIColor.clear()
         
         self.addChild(connector.circle)
         self.addChild(connector.circleTouchArea)
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard let touch = touches.first else { return }
-        let location = touch.locationInNode(self)
+        let location = touch.location(in: self)
         
-        let nodes = nodesAtPoint(location)
+        let nodes = self.nodes(at: location)
         
         for node in nodes {
             if let nodeName = node.name {
-                if nodeName.containsString("circle") == true {
-                    if let lastIndex = Int(nodeName.substringFromIndex(nodeName.startIndex.advancedBy(6))) {
+                if nodeName.contains("circle") == true {
+                    if let lastIndex = Int(nodeName.substring(from: nodeName.characters.index(nodeName.startIndex, offsetBy: 6))) {
                         currentConnectorPressed = lastIndex
                         touchesStarted = true
                         circleTouched = true
@@ -157,36 +170,36 @@ class GameScene: SKScene {
         
     }
     
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         if touchesStarted == true {
             guard let touch = touches.first else { return }
-            let location = touch.locationInNode(self)
+            let location = touch.location(in: self)
             
             moveConnector(connectors[currentConnectorPressed], currentLocation: location)
         }
     }
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         touchesStarted = false
         checkForCollision()
         
         circleTouched = false
     }
     
-    func moveConnector(connector: Connector, currentLocation: CGPoint) {
+    func moveConnector(_ connector: Connector, currentLocation: CGPoint) {
         
-        let newLineInPath = CGPathCreateMutable()
-        CGPathMoveToPoint(newLineInPath, nil, connector.lineIn.lineStart.x, connector.lineIn.lineStart.y)
-        CGPathAddLineToPoint(newLineInPath, nil, currentLocation.x, currentLocation.y)
+        let newLineInPath = CGMutablePath()
+        newLineInPath.moveTo(nil, x: connector.lineIn.lineStart.x, y: connector.lineIn.lineStart.y)
+        newLineInPath.addLineTo(nil, x: currentLocation.x, y: currentLocation.y)
         connector.lineIn.lineShape.path = newLineInPath
-        connector.lineIn.lineEnd = CGPointMake(currentLocation.x, currentLocation.y)
+        connector.lineIn.lineEnd = CGPoint(x: currentLocation.x, y: currentLocation.y)
         
-        let newLineOutPath = CGPathCreateMutable()
-        CGPathMoveToPoint(newLineOutPath, nil, currentLocation.x, currentLocation.y)
-        CGPathAddLineToPoint(newLineOutPath, nil, connector.lineOut.lineEnd.x, connector.lineOut.lineEnd.y)
+        let newLineOutPath = CGMutablePath()
+        newLineOutPath.moveTo(nil, x: currentLocation.x, y: currentLocation.y)
+        newLineOutPath.addLineTo(nil, x: connector.lineOut.lineEnd.x, y: connector.lineOut.lineEnd.y)
         connector.lineOut.lineShape.path = newLineOutPath
-        connector.lineOut.lineStart = CGPointMake(currentLocation.x, currentLocation.y)
+        connector.lineOut.lineStart = CGPoint(x: currentLocation.x, y: currentLocation.y)
         
-        connector.circle.position = CGPointMake(currentLocation.x, currentLocation.y)
+        connector.circle.position = CGPoint(x: currentLocation.x, y: currentLocation.y)
         connector.circleTouchArea.position = connector.circle.position
     
     }
@@ -248,9 +261,9 @@ class GameScene: SKScene {
                     }
                     
                     if x >= min(point1.x, point2.x) && x >= min(point3.x, point4.x) && x <= max(point1.x, point2.x) && x <= max(point3.x, point4.x) && y >= min(point1.y, point2.y) && y >= min(point3.y, point4.y) && y <= max(point1.y, point2.y) && y <= max(point3.y, point4.y){
-                        collisions++
-                        line.hasCollision++
-                        line2.hasCollision++
+                        collisions += 1
+                        line.hasCollision += 1
+                        line2.hasCollision += 1
                     }
                 }
             }
@@ -261,49 +274,58 @@ class GameScene: SKScene {
                 let redColor = UIColor(red: 1.0, green: 0.45, blue: 0.45, alpha: 1.0)
                 line.lineShape.strokeColor = redColor
             } else {
-                let greenColor = UIColor(red: 200/256, green: 247/256, blue: 197/256, alpha: 1.0)
-                line.lineShape.strokeColor = greenColor
+                let blueColor = UIColor(red: 0.0, green: 122.0/255.0, blue: 255.0, alpha: 1.0)
+                line.lineShape.strokeColor = blueColor
             }
             line.hasCollision = 0
         }
         
         if collisions == 0 {
             // game completed
-            let seconds = 2.0
+            let seconds = 0.7
             let delay = seconds * Double(NSEC_PER_SEC)  // nanoseconds per seconds
-            let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+            let dispatchTime = DispatchTime.now() + Double(Int64(delay)) / Double(NSEC_PER_SEC)
             
-            dispatch_after(dispatchTime, dispatch_get_main_queue(), {
+            //DispatchQueue.main.after(when: dispatchTime, execute: {
                 
-                self.viewController!.performSegueWithIdentifier("gameEnded", sender: self)
-                
-            })
+            self.viewController!.performSegue(withIdentifier: "gameEnded", sender: self)
+            let endGame = self.viewController!.presentedViewController as! EndGameViewController
+            
+            endGame.level = self.level+1
+            self.level+=1
+            endGame.stars = self.determineStars()
+            //})
         }
         
         if circleTouched == true {
-            movesAllowed!--
+            movesAllowed! -= 1
         }
         
         if movesAllowed <= 0 {
             
-            let seconds = 2.0
+            let seconds = 0.7
             let delay = seconds * Double(NSEC_PER_SEC)  // nanoseconds per seconds
-            let dispatchTime = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+            let dispatchTime = DispatchTime.now() + Double(Int64(delay)) / Double(NSEC_PER_SEC)
             
-            dispatch_after(dispatchTime, dispatch_get_main_queue(), {
-                self.viewController!.performSegueWithIdentifier("gameOver", sender: self)
-                self.restartLevel(self.level)
-            })
+            //DispatchQueue.main.after(when: dispatchTime, execute: {
+            self.viewController!.performSegue(withIdentifier: "gameOver", sender: self)
+                
+                
+                /*dispatch_after(dispatchTime2, dispatch_get_main_queue(), {
+                    self.restartLevel(self.level)
+                })*/
+            //})
             
             
         }
     }
     
-    func restartLevel(level: Int) {
+    func restartLevel(_ level: Int) {
         coordinates = []
         lines = []
         connectors = []
         
+        self.removeAllActions()
         self.removeAllChildren()
         
         loadLevel(level)
@@ -351,7 +373,7 @@ class GameScene: SKScene {
         return starNumber
     }
     
-    override func update(currentTime: CFTimeInterval) {
+    override func update(_ currentTime: TimeInterval) {
         /* Called before each frame is rendered */
         
     }

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>491486575261-am8c6oqfe4edlf2gcviv9njh1ot7qk92.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.491486575261-am8c6oqfe4edlf2gcviv9njh1ot7qk92</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCVp7a8cYiX5f1B8Ae4WLjHg6QWh20muxk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>491486575261</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.prestonwprice.knotz</string>
+	<key>PROJECT_ID</key>
+	<string>knotz-19050</string>
+	<key>STORAGE_BUCKET</key>
+	<string>knotz-19050.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:491486575261:ios:f53f4032c341339e</string>
+	<key>DATABASE_URL</key>
+	<string>https://knotz-19050.firebaseio.com</string>
+</dict>
+</plist>

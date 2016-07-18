@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import GoogleMobileAds
 
 class EndGameViewController: UIViewController {
     
@@ -16,54 +17,99 @@ class EndGameViewController: UIViewController {
     @IBOutlet weak var star1: UIImageView!
     
     @IBOutlet weak var nextLevel: UIButton!
+    @IBOutlet weak var menuButton: UIButton!
+    
+    @IBOutlet weak var completedText: UILabel!
+    @IBOutlet weak var levelText: UILabel!
     
     var level: Int!
     var stars: Int!
     
     
     override func viewDidLoad() {
-        displayStars()
-
-        nextLevel.layer.borderColor = UIColor.blackColor().CGColor
-        nextLevel.layer.borderWidth = 1.0
-        level!++
+        level = 0
         
-        let user = User(maxLevel: level!)
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let gameView = self.presentingViewController as! GameViewController
+        let gameScene = gameView.skView.scene as! GameScene
+        
+        level = gameScene.level
+
+        if level > 24 {
+            nextLevel.isHidden = true
+            //menuButton.hidden = true
+            
+            star1.isHidden = true
+            star2.isHidden = true
+            star3.isHidden = true
+            
+            levelText.text = "Congratulations!"
+            completedText.text = "You beat all the levels!"
+            completedText.font = UIFont(name: (completedText.font?.fontName)!, size: 20)
+        }
+        
+        let user = User(maxLevel: level)
+        displayStars(user)
+        
         let oldMaxLevel = user.loadSaved()
         if oldMaxLevel < level {
+            user.maxLevel = level
             user.save()
         }
         
         
-        
     }
     
-    func displayStars() {
+    
+    @IBAction func nextTapped(_ sender: AnyObject) {
+        let gameView = self.presentingViewController as! GameViewController
+        let gameScene = gameView.skView.scene as! GameScene
+        
+        gameScene.level += 1
+        gameScene.restartLevel(gameScene.level)
+        
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func displayStars(_ user: User) {
+        var starsPerLevel = user.loadSavedStarArray()
+        
         if stars == 1 {
-            star1.image = UIImage(named: "goldStar.png")
+            if starsPerLevel[level-2] < 1 {
+              starsPerLevel[level-2] = 1
+            }
+            star1.image = UIImage(named: "star.png")
             star2.image = UIImage(named: "blankStar.png")
             star3.image = UIImage(named: "blankStar.png")
         } else if stars == 2 {
-            star1.image = UIImage(named: "goldStar.png")
-            star2.image = UIImage(named: "goldStar.png")
+            if starsPerLevel[level-2] < 2 {
+                starsPerLevel[level-2] = 2
+            }
+            star1.image = UIImage(named: "star.png")
+            star2.image = UIImage(named: "star.png")
             star3.image = UIImage(named: "blankStar.png")
         } else if stars == 3 {
-            star1.image = UIImage(named: "goldStar.png")
-            star2.image = UIImage(named: "goldStar.png")
-            star3.image = UIImage(named: "goldStar.png")
-        } else {
+            if starsPerLevel[level-2] < 3 {
+                starsPerLevel[level-2] = 3
+            }
+            star1.image = UIImage(named: "star.png")
+            star2.image = UIImage(named: "star.png")
+            star3.image = UIImage(named: "star.png")
+        } else if stars == 0 {
+            starsPerLevel[level-2] = 0
             star1.image = UIImage(named: "blankStar.png")
             star2.image = UIImage(named: "blankStar.png")
             star3.image = UIImage(named: "blankStar.png")
         }
+        
+        user.starsPerLevel = starsPerLevel
+        
+        user.saveStarArray()
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "nextLevel" {
-            if let destination = segue.destinationViewController as? GameViewController {
-                destination.level = self.level!
-            }
-        }
-    }
+    
     
 }
