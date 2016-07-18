@@ -10,8 +10,6 @@
 		1E8188CF1D3C6B73008CB26E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E8188CE1D3C6B73008CB26E /* GoogleService-Info.plist */; };
 		1E9A8A3B1D3DA2BA005C5CC7 /* KnotzNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E9A8A3A1D3DA2BA005C5CC7 /* KnotzNavigationBar.swift */; };
 		1EA5B66C1D3C63AF00C6A4B2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EA5B66B1D3C63AF00C6A4B2 /* LoginViewController.swift */; };
-		1ED9F0651D3C6EF500B2BE62 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ED9F0631D3C6EF500B2BE62 /* FBSDKCoreKit.framework */; };
-		1ED9F0661D3C6EF500B2BE62 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ED9F0641D3C6EF500B2BE62 /* FBSDKLoginKit.framework */; };
 		8450A0BC1C42EC45003A2DE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A0BB1C42EC45003A2DE2 /* AppDelegate.swift */; };
 		8450A0BE1C42EC45003A2DE2 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8450A0BD1C42EC45003A2DE2 /* GameScene.sks */; };
 		8450A0C01C42EC45003A2DE2 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8450A0BF1C42EC45003A2DE2 /* GameScene.swift */; };
@@ -57,8 +55,6 @@
 		1E8188CE1D3C6B73008CB26E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		1E9A8A3A1D3DA2BA005C5CC7 /* KnotzNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KnotzNavigationBar.swift; sourceTree = "<group>"; };
 		1EA5B66B1D3C63AF00C6A4B2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		1ED9F0631D3C6EF500B2BE62 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
-		1ED9F0641D3C6EF500B2BE62 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		701E276E28C7781BE4D5A972 /* Pods-knotz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-knotz.debug.xcconfig"; path = "Pods/Target Support Files/Pods-knotz/Pods-knotz.debug.xcconfig"; sourceTree = "<group>"; };
 		8450A0B81C42EC45003A2DE2 /* knotz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = knotz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8450A0BB1C42EC45003A2DE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,8 +106,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E02EDE26A4A3325B8AD51515 /* libPods-knotz.a in Frameworks */,
-				1ED9F0651D3C6EF500B2BE62 /* FBSDKCoreKit.framework in Frameworks */,
-				1ED9F0661D3C6EF500B2BE62 /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,8 +199,6 @@
 		902D8694488583A94FA66BBA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1ED9F0631D3C6EF500B2BE62 /* FBSDKCoreKit.framework */,
-				1ED9F0641D3C6EF500B2BE62 /* FBSDKLoginKit.framework */,
 				DD1684FB63F2E5360963F7ED /* libPods-knotz.a */,
 			);
 			name = Frameworks;
