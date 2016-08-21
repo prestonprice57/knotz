@@ -1,6 +1,9 @@
 target 'knotz' do
-    pod 'AdColony'
-    pod 'Google-Mobile-Ads-SDK', '~> 7.0'
     pod 'Firebase'
     pod 'Firebase/Auth'
+    pod 'Firebase/Database'
+    pod 'GoogleSignIn'
+    pod 'Realm'
+    pod 'RealmSwift', :git => 'https://github.com/realm/realm-cocoa.git', :branch => 'master'
+    use_frameworks!
 end

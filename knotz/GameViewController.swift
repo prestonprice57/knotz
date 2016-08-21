@@ -8,7 +8,6 @@
 
 import UIKit
 import SpriteKit
-import GoogleMobileAds
 
 class GameViewController: UIViewController {
     
@@ -60,16 +59,20 @@ class GameViewController: UIViewController {
             
         }
     }
-    
-    override func shouldAutorotate() -> Bool {
-        return true
+  
+    override var shouldAutorotate: Bool {
+        get {
+            return true
+        }
     }
     
-    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-        if UIDevice.current().userInterfaceIdiom == .phone {
-            return .allButUpsideDown
-        } else {
-            return .all
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        get {
+            if UIDevice.current.userInterfaceIdiom == .phone {
+                return .allButUpsideDown
+            } else {
+                return .all
+            }
         }
     }
     
@@ -78,8 +81,10 @@ class GameViewController: UIViewController {
         // Release any cached data, images, etc that aren't in use.
     }
     
-    override func prefersStatusBarHidden() -> Bool {
-        return true
+    override var prefersStatusBarHidden: Bool {
+        get {
+            return true
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

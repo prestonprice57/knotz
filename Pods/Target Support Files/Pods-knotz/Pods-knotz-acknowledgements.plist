@@ -14,14 +14,6 @@
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>You must accept the terms and conditions on the AdColony website by registering in order to legally use the AdColony SDK. U.S. based companies will need to complete the W-9 form and send it to us, as well as complete the section on payment information on clients.adcolony.com, before publisher payments can be issued.</string>
-			<key>Title</key>
-			<string>AdColony</string>
-			<key>Type</key>
-			<string>PSGroupSpecifier</string>
-		</dict>
-		<dict>
-			<key>FooterText</key>
 			<string>Copyright 2016 Google Inc.</string>
 			<key>Title</key>
 			<string>Firebase</string>
@@ -46,17 +38,17 @@
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>Copyright 2016 Google Inc.</string>
+			<string>Copyright 2016 Google</string>
 			<key>Title</key>
-			<string>FirebaseInstanceID</string>
+			<string>FirebaseDatabase</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>Copyright 2011 Google Inc. All Rights Reserved.</string>
+			<string>Copyright 2016 Google Inc.</string>
 			<key>Title</key>
-			<string>Google-Mobile-Ads-SDK</string>
+			<string>FirebaseInstanceID</string>
 			<key>Type</key>
 			<string>PSGroupSpecifier</string>
 		</dict>

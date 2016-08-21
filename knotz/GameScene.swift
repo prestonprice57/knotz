@@ -49,7 +49,7 @@ class GameScene: SKScene {
         }
         
         let destinationFile = "level\(levelNumber)"
-        if let filepath = Bundle.main.pathForResource(destinationFile, ofType: "txt") {
+        if let filepath = Bundle.main.path(forResource: destinationFile, ofType: "txt") {
             do {
                 let contents = try NSString(contentsOfFile: filepath, usedEncoding: nil) as String
                 let coordinateArray = contents.components(separatedBy: "\n")
@@ -135,15 +135,15 @@ class GameScene: SKScene {
         
         drawLine(connector.lineOut)
         connector.circle.position = CGPoint(x: connector.lineIn.lineEnd.x, y: connector.lineIn.lineEnd.y)
-        connector.circle.fillColor = UIColor.white()
+        connector.circle.fillColor = UIColor.white
         connector.circle.zPosition = 100
         connector.circle.name = "circle" + connectorNumber
         connector.circle.strokeColor = UIColor(red: 0.0, green: 122.0/255.0, blue: 255.0, alpha: 1.0)
         
         connector.circleTouchArea.position = connector.circle.position
-        connector.circleTouchArea.fillColor = UIColor.clear()
+        connector.circleTouchArea.fillColor = UIColor.clear
         connector.circleTouchArea.name = "circle" + connectorNumber
-        connector.circleTouchArea.strokeColor = UIColor.clear()
+        connector.circleTouchArea.strokeColor = UIColor.clear
         
         self.addChild(connector.circle)
         self.addChild(connector.circleTouchArea)

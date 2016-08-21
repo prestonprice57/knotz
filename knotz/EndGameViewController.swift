@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import GoogleMobileAds
 
 class EndGameViewController: UIViewController {
     
@@ -51,14 +50,14 @@ class EndGameViewController: UIViewController {
             completedText.font = UIFont(name: (completedText.font?.fontName)!, size: 20)
         }
         
-        let user = User(maxLevel: level)
-        displayStars(user)
-        
-        let oldMaxLevel = user.loadSaved()
-        if oldMaxLevel < level {
-            user.maxLevel = level
-            user.save()
-        }
+        //let user = User(maxLevel: level)
+//        displayStars(user)
+//        
+//        let oldMaxLevel = user.loadSaved()
+//        if oldMaxLevel < level {
+//            user.maxLevel = level
+//            user.save()
+//        }
         
         
     }
@@ -74,41 +73,41 @@ class EndGameViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    func displayStars(_ user: User) {
-        var starsPerLevel = user.loadSavedStarArray()
-        
-        if stars == 1 {
-            if starsPerLevel[level-2] < 1 {
-              starsPerLevel[level-2] = 1
-            }
-            star1.image = UIImage(named: "star.png")
-            star2.image = UIImage(named: "blankStar.png")
-            star3.image = UIImage(named: "blankStar.png")
-        } else if stars == 2 {
-            if starsPerLevel[level-2] < 2 {
-                starsPerLevel[level-2] = 2
-            }
-            star1.image = UIImage(named: "star.png")
-            star2.image = UIImage(named: "star.png")
-            star3.image = UIImage(named: "blankStar.png")
-        } else if stars == 3 {
-            if starsPerLevel[level-2] < 3 {
-                starsPerLevel[level-2] = 3
-            }
-            star1.image = UIImage(named: "star.png")
-            star2.image = UIImage(named: "star.png")
-            star3.image = UIImage(named: "star.png")
-        } else if stars == 0 {
-            starsPerLevel[level-2] = 0
-            star1.image = UIImage(named: "blankStar.png")
-            star2.image = UIImage(named: "blankStar.png")
-            star3.image = UIImage(named: "blankStar.png")
-        }
-        
-        user.starsPerLevel = starsPerLevel
-        
-        user.saveStarArray()
-    }
+//    func displayStars(_ user: User) {
+//        var starsPerLevel = user.loadSavedStarArray()
+//        
+//        if stars == 1 {
+//            if starsPerLevel[level-2] < 1 {
+//              starsPerLevel[level-2] = 1
+//            }
+//            star1.image = UIImage(named: "star.png")
+//            star2.image = UIImage(named: "blankStar.png")
+//            star3.image = UIImage(named: "blankStar.png")
+//        } else if stars == 2 {
+//            if starsPerLevel[level-2] < 2 {
+//                starsPerLevel[level-2] = 2
+//            }
+//            star1.image = UIImage(named: "star.png")
+//            star2.image = UIImage(named: "star.png")
+//            star3.image = UIImage(named: "blankStar.png")
+//        } else if stars == 3 {
+//            if starsPerLevel[level-2] < 3 {
+//                starsPerLevel[level-2] = 3
+//            }
+//            star1.image = UIImage(named: "star.png")
+//            star2.image = UIImage(named: "star.png")
+//            star3.image = UIImage(named: "star.png")
+//        } else if stars == 0 {
+//            starsPerLevel[level-2] = 0
+//            star1.image = UIImage(named: "blankStar.png")
+//            star2.image = UIImage(named: "blankStar.png")
+//            star3.image = UIImage(named: "blankStar.png")
+//        }
+//        
+//        user.starsPerLevel = starsPerLevel
+//        
+//        user.saveStarArray()
+//    }
     
     
     

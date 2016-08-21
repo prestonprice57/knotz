@@ -6,48 +6,73 @@
 //  Copyright © 2016 prestonwprice. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class MainViewController: UIViewController {
     
-    var user: User!
-    var maxLevel: Int!
+    let sharedData = Data.sharedData
     
+    @IBOutlet weak var activityView: UIActivityIndicatorView!
     @IBOutlet weak var playButton: UIButton!
     
     @IBAction func playPressed(_ sender: UIButton) {
         if let button = sender as UIButton! {
-            self.animate(button: button, segueName: "toLevelVC")
+            self.animate(button: button, segueName: "toCategoryVC")
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        user = User(maxLevel: 1)
-        maxLevel = user.loadSaved()
-        
-        
+        // Create data file path if it does not exist
+        let fileManager = FileManager()
+        if !fileManager.fileExists(atPath: DataFilePath.categoryData) {
+            let created = fileManager.createFile(atPath: DataFilePath.categoryData, contents: nil, attributes: nil)
+            if created {
+                print("File created ")
+            } else {
+                print("Couldn't create file for some reason")
+            }
+            activityView.startAnimating()
+            let sharedData = Data.sharedData
+            sharedData.loadData() { [unowned self] (Void) in
+                self.activityView.stopAnimating()
+                self.activityView.hidesWhenStopped = true
                 
+                let data = NSKeyedArchiver.archivedData(withRootObject: sharedData.mainData)
+                
+                do {
+                    let url = URL(fileURLWithPath: DataFilePath.categoryData)
+                    try data.write(to: url, options: .atomic)
+                } catch {
+                    print("Error writing to file")
+                }
+                
+
+                
+                
+                let fileContents = fileManager.contents(atPath: DataFilePath.categoryData)
+                let json = NSKeyedUnarchiver.unarchiveObject(with: fileContents!)
+                print(json)
+            }
+        } else {
+            let fileContents = fileManager.contents(atPath: DataFilePath.categoryData)
+            if let json = NSKeyedUnarchiver.unarchiveObject(with: fileContents!) as? NSDictionary {
+                sharedData.mainData = json
+            }
+        }
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: AnyObject?) {
 
         
-        if segue.identifier == "toLevelVC" {
-            if let destination = segue.destinationViewController as? LevelViewController {
-                destination.maxLevelCompleted = maxLevel!
-            }
+        if segue.identifier == "toCategoryVC" {
+
         }
     }
     
-    @IBAction func segueToLevelVB(segue: UIStoryboardSegue) {
-        
-    }
-    
     @IBAction func returnToMainMenu(_ segue: UIStoryboardSegue) {
-        maxLevel = user.loadSaved()
+        
     }
     
     func animate(button: UIButton, segueName: String) {
@@ -63,4 +88,9 @@ class MainViewController: UIViewController {
         })
     }
     
+    override var prefersStatusBarHidden: Bool {
+        get {
+            return true
+        }
+    }
 }

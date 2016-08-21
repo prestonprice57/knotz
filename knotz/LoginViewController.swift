@@ -52,7 +52,7 @@ class LoginViewController: UIViewController, GIDSignInUIDelegate {
     }
     
     func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!, withError error: NSError?) {
-        if let error = error {
+        if error != nil {
             print("Signed in")
             return
         }
